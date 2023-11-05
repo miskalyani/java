@@ -45,3 +45,46 @@ public class Practice extends Frame{
 });
 }  
 }
+ANOTHER METHOD 
+ */
+import java.awt.*;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowAdapter;
+
+public class Practice extends Frame{
+    ///String str ="java programming";
+    Practice(String s)
+    {
+              setSize(600,400);
+        setVisible(true);
+        addWindowListener(new WindowAdapter(){
+                @Override
+                 public void windowClosing(WindowEvent e)
+                 {
+                     dispose();
+                 }
+
+    
+});
+    }
+
+    @Override
+    public void paint (Graphics g)
+    {
+       /// Font f = new Font("TimesRomen",Font.ITALIC,40);
+    ///    g.setFont(f);
+    ///    setForeground(Color.GREEN);
+        g.setColor(Color.red);
+        g.drawRect(300,200,100,100);
+        
+        int x[] = {85,85,106,85};
+        int y[] = {95,104,104,95};
+        g.drawPolygon(x, y, 4); 
+        
+    }
+    public static void main(String []args)
+    {
+        Practice obj= new Practice("demo");
+  
+}  
+}
