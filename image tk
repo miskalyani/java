@@ -1,0 +1,38 @@
+import java.awt.*;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowAdapter;
+
+public class Practice extends Frame{
+    ///String str ="java programming";
+    Practice(String s)
+    {
+        super(s);
+              setSize(600,400);
+        setVisible(true);
+        addWindowListener(new WindowAdapter(){
+                @Override
+                 public void windowClosing(WindowEvent e)
+                 {
+                     dispose();
+                 }
+
+    
+});
+    }
+
+    @Override
+    public void paint (Graphics g)
+    {
+ 
+Toolkit tk = Toolkit.getDefaultToolkit();
+Image img= tk.getImage("C:\\Users\\kalya\\OneDrive\\Pictures\\Camera Roll");
+int i=200;
+int j=200;
+g.drawImage(img,i,j,20,20,null);
+    }
+    public static void main(String []args)
+    {
+        Practice obj= new Practice("PRACTICE");
+  
+}  
+}
