@@ -55,6 +55,7 @@ public class Practice extends Frame{
     ///String str ="java programming";
     Practice(String s)
     {
+              super(s);
               setSize(600,400);
         setVisible(true);
         addWindowListener(new WindowAdapter(){
@@ -84,7 +85,7 @@ public class Practice extends Frame{
     }
     public static void main(String []args)
     {
-        Practice obj= new Practice("demo");
+        Practice obj= new Practice("PRACTICE");
   
 }  
 }
